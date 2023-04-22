@@ -4,7 +4,8 @@
     font-family: 'Roboto', sans-serif;
 }
 body {
-    background-color: lightsteelblue;        
+    background-color: lightsteelblue;
+    overflow-x: hidden;        
 }
 h1 {
     padding: 15px;    
@@ -19,7 +20,7 @@ h1 {
 }
 h2 {
     grid-column: 1 / 4;
-    padding-bottom: 10px;
+    margin-bottom: 1%;
 }
 h4 {    
     font-weight: lighter;
@@ -30,6 +31,7 @@ h6 {
 }
 p {
     font-size: 1rem;
+    margin-top: 1%;
 }
 a:link {
     text-decoration:none;
@@ -44,13 +46,32 @@ a:hover {
 a:active {
     text-decoration:none;
 }
+/* scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* scrollbar  Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey; 
+    border-radius: 5px;    
+}
+/* scrollbar  Handle */
+::-webkit-scrollbar-thumb {
+    background: lightpink; 
+    border-radius: 5px;
+}
 /* MAIN CONTAINER */ 
 .container {
     display: grid;    
     grid-template-columns: auto;
-    grid-template-rows: 20vh 5vh 65vh 10vh;
+    grid-template-rows: 20vh 8vh 65vh 7vh;
 }
-
+.col2 {
+    grid-column: 1 / 3;
+}
+.col3 {
+    grid-column: 2 / 4;
+}
 /* HEADER */
 .header {
     background: url(../img/header.jpg) no-repeat top fixed;
@@ -94,24 +115,30 @@ a:active {
 
 /*SECTION*/
 .show {
-    display: none;
-    padding: 10px;    
+    display: none;    
     background-color: lightsteelblue;       
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
     grid-template-rows: 5vh;
-    column-gap: 0.5%;    
+    column-gap: 2%;    
+    padding: 1% 0.5% 0 1%;
+    margin-bottom: -2%;
     align-items: start;
+    height: 65vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .show .active {
     display: grid;
 }
 /*CONTACT FORM*/ 
-.contform {
-    grid-column: 1 / 3;
+.contactrow {
+    grid-template-rows: auto auto auto;
 }
 form {
     display: grid;    
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 49% 49%;
+    grid-row: 2 / 4;
+    column-gap: 2%;
     text-align: left;
     width: 100%;
 }
@@ -122,13 +149,14 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     border-radius: 10px;
+    width: 100%;
 }
 textarea {    
     resize: none;
     height: 100px;    
 }
 input[type=submit] {
-    width: 80%;
+    width: 100%;
     background-color: rgba(255,255,255,0.6);
     border-radius: 10px;
     height: 50px;
@@ -152,16 +180,41 @@ input[type=submit]:active {
     background-color: lightcoral;
     color: white;
 }
+.contactlist {
+    overflow: show;
+}
+.contactlist li {
+    list-style-type: none;
+    padding: 11px 0px;
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 16px;
+    word-break: break-word;
+    text-align: right;
+}
+.contactlist li strong {
+    float: left;
+    margin-right: 8px;
+    padding: 1px 8px;
+    background: lightcoral;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+    font-weight: 400;
+    text-transform: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
 
 /*FOOTER*/
 .footer {
     position: fixed;
-    padding: 10px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;    
     align-content: space-evenly;
     bottom: 0;
-    height: 10vh;
+    height: 6vh;
     width: 100%;
     background-color: lightpink;
     text-align: center;
