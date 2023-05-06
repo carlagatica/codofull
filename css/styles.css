@@ -52,6 +52,7 @@ a:active {
 /* scrollbar width */
 ::-webkit-scrollbar {
     width: 10px;
+    
 }
 /* scrollbar  Track */
 ::-webkit-scrollbar-track {
@@ -75,7 +76,9 @@ a:active {
 .col3 {
     grid-column: 2 / 4;
 }
-
+.col4 {
+    grid-column: 1 / 4;
+}
 /* HEADER */
 .header {
     background: url(../img/header.jpg) no-repeat top fixed;
@@ -189,12 +192,14 @@ width: 0;
     grid-column: 1 / 4;
     font-size: 1.5rem;
     font-weight: bolder;
-    color: #cc8f80; 
+    color: #2F333D; 
     text-align: center;
     padding-bottom: 15px;
     -webkit-text-stroke-color: black; 
     -webkit-text-stroke-width: 0.1px;    
 }
+
+/*
 .card {
     background-color: #c5e3b9;
     overflow: hidden;
@@ -220,19 +225,64 @@ width: 0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3) inset;
     top: auto;
     bottom: 0;
+}*/
+
+.listadona {
+    background-color: rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    border: 1px solid #2F333D;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.listadona:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.listadona .titulo {
+    background-color: #2F333D;
+    border-bottom: 1px solid #eee;
+    color: #cc8f80;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.listadona li {    
+    padding: 10px;
+    text-align: center;
 }
 .descripcion {
-    color:grey;
+    color:white;
     font-size: 1rem;
     line-height: 25px;
     margin: 0;
 }
 .precio {
+    border-top: 1px solid #eee;
+    background-color: #2F333D;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.precio a {
     color: #cc8f80; 
     font-weight: bolder;
     font-size: 1.5rem;
 }
-
+.precio a:hover {
+    transition: 0.3s;
+    color: #aac49c;
+}
+hr.solid {
+    height: 8px;
+    background-image: radial-gradient(#2f333d, transparent 65%);
+    border: 0;
+    height: 1px;
+    grid-column: 1 / 4;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
 /*CONTACT FORM*/ 
 .contactrow {
     grid-template-rows: auto auto auto;
