@@ -35,12 +35,17 @@
             <div class="show" id="fundacion">        
                 <h2>¿QUIENES SOMOS?</h2>
                 <div class="containerFundacion col4">
-                    <img src="img/Logotipo.png" alt="Logotipo">            
-                    <div> 
+                    <img src="img/logo.png" alt="Logotipo">            
+                    <div class="col6">
                         <h3> ¡Bienvenid@! </h3>
                         <p> Somos una Fundación sin Fines de Lucro, por el bienestar animal. Somos una entidad solidaria creada en Buenos Aires, Argentina con el Objetivo de ayudar a los animalitos sin hogar.</p> 
                         <p> En nuestro hogar Canino, albergamos animalitos que han sido rescatados de la calle o de situaciones de abuso, y los recuperamos para que puedan ser incorporados a una familia a través de la adopción responsable. </p>
-                        <h4> Misión </h4>
+                     </div>
+                </div>
+                <div class="containerFundacion col4">
+                    <img src="img/logo.png" alt="Logotipo">
+                    <div class="col6">
+                        <h3> Misión </h3>
                         <p> Tenemos como misión principal de rescatar animalitos en situación de calle y riesgo de vida, para así recuperarlos y buscarles un hogar definitivo.</p>
                         <p> Muchos de los animalitos tienen la suerte de encontrar un hogar definitivo, mientras que otros se quedan con nosotros por el resto de sus vidas. Nuestro compromiso asegurar que cada animalito tenga una buena vida en nuestro Hogar incluyendo excelente alimentación, cuidados veterinarios, cariño y juego, sin importar cuánto tiempo deba vivir con nosotros.</p>
                         <p> Nuestro Centro de Adopciones está siempre abierto a quienes estén buscando una mascota para amar y cuidar.  Durante todo el año hay animalitos de todas las edades, tamaños y colores esperando que lleguen sus nuevos humanos.</p>
@@ -258,8 +263,27 @@
                 <div class="descripcion">
                     <p>Parte sumamente importante para los rescates de animales en riesgo es contar con un hogar transitorio.</p>
                     <br>
+                </div>
+                <div class="descripcion">
+                    <img src="img/transitorio.png" alt="Hogar transitorio para mascotas rescatadas">
+                    <ul class="requisitos">Dar Tránsito: 
+                        <li>Es darle un lugar temporal a un animal en tu domicilio para cuidarlos durante un periodo de tiempo (el que vos elijas) con todos los gastos a nuestro cargo.</li>
+                        <li>Se entrega lo necesario para que al transitado no le falte nada (alimento, cuchas, mantas, remedios, pipetas, etc)</li>
+                        <li>Podés ofrecer tu espacio, por más pequeño que sea, como hogar transitorio, si contás con las ganas, el tiempo y el lugar para ayudar a un animal en ese momento donde está más vulnerable, aunque no estés en condiciones de adoptarlo definitivamente.</li>
+                        <p class="enfasis">¡Ofrecer tránsito también ayuda!</p>
+                </div>
+                <div class="descripcion">
+                    <p>¿Qué es un hogar transitorio u Hogar de Guarda?
+                    Los hogares transitorios son casas de personas que cuidan animales por un período de tiempo determinado, hasta que el animal encuentre la persona indicada que lo adopte definitivamente.
+
+                    Los hogares de tránsito ayudan mucho a los animales a sobrellevar una situación difícil en un momento dado, por ejemplo; cuando se le ofrece tránsito a un animal maltratado hasta que éste se recupera por completo, o cuando se crían cachorros que hayan perdido a su madre. Los casos son variados, desde pre y post cirugías, tratamientos, sociabilización, madres por parir, etc.</p>
+                    <img src="img/transitorio2.jpg" alt="Niño de hogar transitorio para mascotas rescatadas">
+                </div>
+                <div class="col4 descripcion">
                     <p>Completá el formulario para ser una casa de familia transitoria o de guarda.
                     Tu casa puede ser el hogar que tantos perros/as y gatos/as necesitan!</p>
+                </div>
+                <div class="col4">
                     <h5 style="font-size: 1rem;">Datos personales (Todos los campos son requeridos)</h5>
                     <form action="/action_page.php" target="_blank" method="post" autocomplete="on">  <!-- CAMBIAR ACTION / INSERTAR DESTINO -->  
                         <div>
@@ -289,12 +313,12 @@
                         <div>
                             <label for="barrio"><h4>Barrio</h4></label>
                             <input type="text" id="barrio" name="barrio" placeholder="Tu barrio..." required><br>                 
-                        </div><div>
+                        </div>
+                        <div>
                             <label for="loc"><h4>Localidad</h4></label>
                             <input type="text" id="loc" name="localidad" placeholder="La localidad donde vivís..." required><br>                 
-                        </div>
-                        
-                        <div class="col2">
+                        </div>        
+                        <div class="col5">
                             <h5 style="font-size: 1rem;">Datos adicionales (Todos los campos son requeridos)</h5>                            
                         </div>
                         <div>
@@ -305,7 +329,7 @@
                             <label for="morean">No</label><br>
                         </div>
                         <div>
-                            <label for="numan"><h4>Cuántos animales tenés actualmente?</h4></label>
+                            <label for="numan"><h4>¿Cuántos animales tenés?</h4></label>
                             <select id="numan" name="number_animals">
                                 <option value="cero">Ninguno</option>
                                 <option value="uno">1 (uno)</option>
@@ -316,11 +340,18 @@
                               </select>      
                         </div>
                         <div>
-                            <label for="numtr"><h4>A cuántos podrías dar tránsito?</h4></label>
+                            <h4>¿Están vacunados/castrados?</h4>
+                            <input type="radio" id="vac" name="vacuna_castrado" value="si">
+                            <label for="vac">Si</label><br>
+                            <input type="radio" id="vac" name="vacuna_castrado" value="no">
+                            <label for="vac">No</label><br>
+                        </div>
+                        <div>
+                            <label for="numtr"><h4>¿A cuántos podrías dar tránsito?</h4></label>
                             <input type="number" id="numtr" name="number_transit" required><br>
                         </div>
                         <div>
-                            <label for="typan"><h4>A qué especie podés dar tránsito?</h4></label>
+                            <label for="typan"><h4>¿A qué especie podés dar tránsito?</h4></label>
                             <select id="typean" name="type_animal">
                                 <option value="gato">Gato</option>
                                 <option value="perro">Perro</option>
@@ -328,37 +359,44 @@
                             </select> 
                         </div>
                         <div>
-                            <label for="daytr"><h4>Cuánto tiempo podés tener en tránsito al animal?</h4></label>
+                            <label for="daytr"><h4>¿Cuánto tiempo podés tener en tránsito al animal?</h4></label>
                             <input type="number" id="daytr" name="days_transit" required><br> 
                         </div>
+                        <div>
+                            <h4>¿Hay niños en la casa?</h4>
+                            <input type="radio" id="kids" name="kids" value="si">
+                            <label for="kids">Si</label><br>
+                            <input type="radio" id="kids" name="kids" value="no">
+                            <label for="kids">No</label><br>
+                        </div>
+                        <div>
+                            <label for="numkids"><h4>¿Cuántos niños hay?</h4></label>
+                            <select id="numkids" name="number_kids">
+                                <option value="cero">Ninguno</option>
+                                <option value="uno">1 (uno)</option>
+                                <option value="dos">2 (dos)</option>
+                                <option value="tres">3 (tres)</option>
+                                <option value="cuatro">4 (cuatro)</option>
+                                <option value="cincomas">5+ (cinco o más)</option>
+                              </select>
+                        </div>
                         <div class="col2">               
-                            <label for="mot"><h4>Por qué querés dar tránsito a un animal?</h4></label>
+                            <label for="mot"><h4>¿Por qué querés dar tránsito a un animal?</h4></label>
                             <textarea id="mot" name="motivo" placeholder="Ingrese su respuesta aquí..." required></textarea><br>
-                            <label for="sec"><h4>Qué medidas de seguridad tiene tu domicilio?</h4></label>
+                        </div>
+                        <div class="col3-4">
+                            <label for="sec"><h4>¿Qué medidas de seguridad tiene tu domicilio?</h4></label>
                             <textarea id="sec" name="security" placeholder="Describa las medidas de seguridad tomadas..." required></textarea><br>
-                            <label for="myfile">A continuación por favor adjunte algunas fotos que muetren los espacios seguros</label><br>
-                            <input type="file" id="myfile" name="myfile">
                         </div>
                         <div class="col2">
+                            <h4>A continuación por favor adjunte algunas fotos que muestren los espacios seguros</h4><br>
+                            <input type="file" id="myfile" name="myfile">
+                            <label for="myfile" class="inFileBtn">Seleccionar archivo</label>
+                        </div>
+                        <div class="col3">
                             <input type="submit" value="Enviar"><br>  
                         </div>
                     </form>
-                    
-                </div>
-                <div class="descripcion">
-                    <img src="img/transitorio.png" alt="Hogar transitorio para mascotas rescatadas">
-                    <ul class="requisitos">Dar Tránsito: 
-                        <li>Es darle un lugar temporal a un animal en tu domicilio para cuidarlos durante un periodo de tiempo (el que vos elijas) con todos los gastos a nuestro cargo.</li>
-                        <li>Se entrega lo necesario para que al transitado no le falte nada (alimento, cuchas, mantas, remedios, pipetas, etc)</li>
-                        <li>Podés ofrecer tu espacio, por más pequeño que sea, como hogar transitorio, si contás con las ganas, el tiempo y el lugar para ayudar a un animal en ese momento donde está más vulnerable, aunque no estés en condiciones de adoptarlo definitivamente.</li>
-                        <p class="enfasis">¡Ofrecer tránsito también ayuda!</p>
-                </div>
-                <div class="descripcion">
-                    <p>¿Qué es un hogar transitorio u Hogar de Guarda?
-                    Los hogares transitorios son casas de personas que cuidan animales por un período de tiempo determinado, hasta que el animal encuentre la persona indicada que lo adopte definitivamente.
-
-                    Los hogares de tránsito ayudan mucho a los animales a sobrellevar una situación difícil en un momento dado, por ejemplo; cuando se le ofrece tránsito a un animal maltratado hasta que éste se recupera por completo, o cuando se crían cachorros que hayan perdido a su madre. Los casos son variados, desde pre y post cirugías, tratamientos, sociabilización, madres por parir, etc)</p>
-                    <img src="img/transitorio2.jpg" alt="Niño de hogar transitorio para mascotas rescatadas">
                 </div>
             </div>
             <!-- SECTION: CONTACT -->  
@@ -407,18 +445,20 @@
         <!-- FOOTER -->    
         <footer class="footer">
             <div>
-                <a href="https://www.instagram.com" target="_blank"><h5><i class="fa-brands fa-instagram"></i> Instagram</h5></a>
+                <a href="https://www.instagram.com" target="_blank"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
             </div>
             <div>
-                <a href="https://www.facebook.com" target="_blank"><h5><i class="fa-brands fa-facebook"></i> Facebook</h5></a>
+                <a href="https://www.facebook.com" target="_blank"><p><i class="fa-brands fa-facebook"></i> Facebook</p></a>
             </div>
             <div>
-                <a href="https://www.facebook.com" target="_blank"><h5><i class="fa-brands fa-whatsapp"></i> Whatsapp</h5></a>
+                <a href="https://www.facebook.com" target="_blank"><p><i class="fa-brands fa-whatsapp"></i> Whatsapp</p></a>
             </div>
             <div>
-                <a href="https://www.facebook.com" target="_blank"><h5><i class="fa-solid fa-location-dot"></i> Dirección</h5></a>
-            </div>            
-            <h6 style="grid-column: 1 / 5;">Diseñado por Grupo 8</h6> <!-- Después completamos con los apellidos -->
+                <a href="https://www.facebook.com" target="_blank"><p><i class="fa-solid fa-location-dot"></i> Dirección</p></a>
+            </div>
+            <div class="col5">            
+                <h6>Diseñado por Grupo 8</h6> <!-- Después completamos con los apellidos -->
+            </div>
         </footer>
     </div>
 </body>
