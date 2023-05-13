@@ -13,6 +13,7 @@ h1 {
     font-weight: bolder;
     color: rgba(255, 255, 255, 0.8); 
     border: #2F333D solid 1px;
+    border-radius: 20px;
     -webkit-text-stroke-color: black; 
     -webkit-text-stroke-width: 0.1px; 
     background-color: rgba(176, 196, 222, 0.4);    
@@ -35,7 +36,7 @@ h5 {
     letter-spacing: 0.1rem;
     text-shadow: 1px 1px 2px #2F333D;
     text-transform: uppercase;    
-    padding: 5% 0% 1% 2%;    
+    padding: 2% 0% 1% 2%;    
 }
 h6 {
     font-size: 0.7rem;    
@@ -99,14 +100,22 @@ a:active {
 }
 /* HEADER */
 .header {
-    background: url(../img/logo.png) no-repeat top fixed;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 20vh;
+    background: url(../img/header.jpg) no-repeat top fixed;
     background-color: #cc8f80;    
-    display: flex;
     align-items: center;    
     justify-content: center;
-    height: 20vh;
+    
 }
-
+.header img {
+    position: absolute;
+    left: 15px;
+    width: 10%;
+    height: auto;
+}
 /*NAVIGATION BAR*/
 .navbar {
     top: 0;
