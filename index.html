@@ -15,12 +15,14 @@
 <body>
     <div class="container">
         <!-- HEADER -->
-        <div class="header">
-            <img src="img/logo.png"><br>
+        <header class="header">
+            <img class="logo" src="img/logo.png" alt="logo de fundacion">
+            <img class="fondo" src="img/header.jpg" alt="fondo perro y gato" width="100%" height="auto">
             <h1>FUNDACIÓN PATITAS FELICES</h1>
-        </div>
+            
+        </header>
         <!-- NAVIGATION BAR -->    
-        <div class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <ul>
                 <li><a class="btn active" href="#fundacion" onmouseup="openCard(event, 'fundacion')">La fundación</a></li>
                 <li><a class="btn" href="#rescates" onmouseup="openCard(event, 'rescates')">Rescates</a></li>
@@ -29,7 +31,7 @@
                 <li><a class="btn" href="#ayudanos" onmouseup="openCard(event, 'ayudanos')">Participá</a></li>
                 <li><a class="btn" href="#contacto" onmouseup="openCard(event, 'contacto')">Contacto</a></li>
             </ul>
-        </div>
+        </nav>
         <!-- CONTENT -->
         <div>
             <!-- SECTION: FUNDACION --> 
@@ -218,6 +220,36 @@
                         <li class="precio"><a href="#" class="button">$1500/mes</a></li>
                     </ul>
                 </div>
+                <div>
+                    <ul class="listadona">
+                        <li class="titulo">
+                            <i class="fa-solid fa-paw"></i><br>
+                            Amor 4 patas
+                        </li>
+                        <li class="descripcion">Con este aporte permites que un animal rescatado pueda recibir el tratamiento necesario, estadía, y parte de su alimentación que requiere mensualmente para cambiar su vida.</li>
+                        <li class="precio"><a href="#" class="button">$500/mes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="listadona">
+                        <li class="titulo">
+                            <i class="fa-solid fa-paw"></i><br>
+                            Amor de rescatado
+                        </li>
+                        <li class="descripcion">Con tu aporte permites ayudar a cubrir  parte del traslado, la estadía y  alimentación de un animal en recuperación o en busca de un hogar. </li>
+                        <li class="precio"><a href="#" class="button">$900/mes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="listadona">
+                        <li class="titulo">
+                            <i class="fa-solid fa-paw"></i><br>
+                            Plan super padrino/madrina
+                        </li>
+                        <li class="descripcion">Con este aporte permites que un animal rescatado pueda recibir el tratamiento necesario, estadía, y parte de su alimentación que requiere mensualmente para cambiar su vida.</li>
+                        <li class="precio"><a href="#" class="button">$1500/mes</a></li>
+                    </ul>
+                </div>
                 <hr class="solid">
                 <div class="subtitle">QUIERO SER VOLUNTARIO/A</div>
                 <div class="descripcion">
@@ -234,11 +266,7 @@
                     <li>Ser puntual en el turno escogido</li>
                     <li>Ser mayor de edad</li>
                     <p class="nota">En caso de no poder cumplir con alguno de estos requisitos, puedess optar por la modalidad de apadrinamiento, donde podrás venir a pasear con los perros o hacer compañía a los gatos del refugio.</p><br>
-                </ul>
-                <div class="descripcion">
-                    <img src="img/volunteer1.jpg" alt="voluntario con perro">  
-                </div>
-                
+                </ul>                
                 <h5>Turnos</h5>
                 <div class="col3">
                     <p class="descripcion">Los turnos de voluntariado son:</p>
@@ -262,8 +290,11 @@
                 <hr class="solid"> 
                 <div class="subtitle">QUIERO OFRECER MI HOGAR PARA TRÁNSITO</div>
                 <div class="descripcion">
-                    <p>Parte sumamente importante para los rescates de animales en riesgo es contar con un hogar transitorio.</p>
-                    <br>
+                    <p>¿Qué es un hogar transitorio u Hogar de Guarda?
+                    Los hogares transitorios son casas de personas que cuidan animales por un período de tiempo determinado, hasta que el animal encuentre la persona indicada que lo adopte definitivamente.
+
+                    Los hogares de tránsito ayudan mucho a los animales a sobrellevar una situación difícil en un momento dado, por ejemplo; cuando se le ofrece tránsito a un animal maltratado hasta que éste se recupera por completo, o cuando se crían cachorros que hayan perdido a su madre. Los casos son variados, desde pre y post cirugías, tratamientos, sociabilización, madres por parir, etc.</p>
+                    <img src="img/transitorio2.jpg" alt="Niño de hogar transitorio para mascotas rescatadas">
                 </div>
                 <div class="descripcion">
                     <img src="img/transitorio.png" alt="Hogar transitorio para mascotas rescatadas">
@@ -274,13 +305,13 @@
                         <p class="enfasis">¡Ofrecer tránsito también ayuda!</p>
                 </div>
                 <div class="descripcion">
-                    <p>¿Qué es un hogar transitorio u Hogar de Guarda?
-                    Los hogares transitorios son casas de personas que cuidan animales por un período de tiempo determinado, hasta que el animal encuentre la persona indicada que lo adopte definitivamente.
-
-                    Los hogares de tránsito ayudan mucho a los animales a sobrellevar una situación difícil en un momento dado, por ejemplo; cuando se le ofrece tránsito a un animal maltratado hasta que éste se recupera por completo, o cuando se crían cachorros que hayan perdido a su madre. Los casos son variados, desde pre y post cirugías, tratamientos, sociabilización, madres por parir, etc.</p>
-                    <img src="img/transitorio2.jpg" alt="Niño de hogar transitorio para mascotas rescatadas">
+                    <img src="img/volunteer1.jpg" alt="voluntario con perro">
+                    <p>Parte sumamente importante para los rescates de animales en riesgo es contar con un hogar transitorio.</p>
+                    <img src="img/transitorio3.jpg" alt="gato cachorro adopciones">
+                    <br>
                 </div>
-                <div class="col4 descripcion">
+                
+                <div class="col4 descripcion">    
                     <p>Completá el formulario para ser una casa de familia transitoria o de guarda. Tu casa puede ser el hogar que tantos perros/as y gatos/as necesitan!</p>
                 </div>
                 <div class="col4">
