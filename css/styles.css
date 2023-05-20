@@ -200,7 +200,49 @@ header h1 {
     padding: 5px;
     background-color: #cc8f80;
 }
+/* SECCION RESCATES */
 
+ .slider
+ {
+    position: fixed;
+    width: 30vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+ }
+
+ .slider .slide-track {
+    /*display: block;*/
+    animation: scroll 30s linear infinite;
+    height: calc(300px * 14);
+ }
+
+ .slider .slide
+ {
+    width: 30vw;
+ }
+
+ .slider .slide img
+ {
+    width: 100%;
+ }
+
+ @keyframes scroll {
+    0% {
+        -webkit-transfrom: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transfrom: translateY(calc(-300px * 7));
+        transform: translateY(calc(-300px * 7));
+    }
+ }
+ .containRescue img
+{
+    width: 65vw;
+    border-radius: 15px;
+    overflow-y: hidden;
+}
 /* SECCION ADOPCIONES */
 
 .containerFicha
