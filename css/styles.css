@@ -202,32 +202,25 @@ header h1 {
 }
 /* SECCION RESCATES */
 
- .slider
- {
+.slider {
     position: fixed;
     width: 30vw;
     height: auto;
     margin: auto;
     overflow: hidden;
- }
-
- .slider .slide-track {
+}
+.slider .slide-track {
     /*display: block;*/
     animation: scroll 30s linear infinite;
     height: calc(300px * 14);
- }
-
- .slider .slide
- {
+}
+.slider .slide {
     width: 30vw;
- }
-
- .slider .slide img
- {
+}
+.slider .slide img {
     width: 100%;
- }
-
- @keyframes scroll {
+}
+@keyframes scroll {
     0% {
         -webkit-transfrom: translateY(0);
         transform: translateY(0);
@@ -236,17 +229,16 @@ header h1 {
         -webkit-transfrom: translateY(calc(-300px * 7));
         transform: translateY(calc(-300px * 7));
     }
- }
- .containRescue img
-{
+}
+.containRescue img {
     width: 65vw;
     border-radius: 15px;
     overflow-y: hidden;
 }
+
 /* SECCION ADOPCIONES */
 
-.containerFicha
-{
+.containerFicha {
     position: relative;
     width: 100%;
     margin: 10px;
@@ -254,8 +246,7 @@ header h1 {
     border-radius: 15px;
     margin-bottom: 10%;
 }  
-.imageFicha
-{
+.imageFicha {
     display: block;
     width: 100%;
     min-width: 300px;
@@ -264,9 +255,7 @@ header h1 {
     margin-right: none;
     border-radius: 15px;
 } 
-
-.containerFicha .btn
-{
+.containerFicha .btn {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -281,9 +270,7 @@ header h1 {
     border-radius: 5px;
     text-align: center;
 }
-
-.containerFicha .btn2
-{
+.containerFicha .btn2 {
     position: absolute;
     top: 80%;
     left: 80%;
@@ -298,14 +285,10 @@ header h1 {
     border-radius: 5px;
     text-align: center;
 } 
-
-.containerFicha .btn:hover
-{
+.containerFicha .btn:hover {
     background-color: #818ca7;
 }
-
-.overlay
-{
+.overlay {
     position: absolute;
     bottom: 0;
     left: 100%;
@@ -318,15 +301,12 @@ header h1 {
     transition: .5s ease;
     border-radius: 15px;
 } 
-
-.containerFicha:hover .overlay
-{
+.containerFicha:hover .overlay {
     width: 100%;
     left: 0;
     border-radius: 15px;
 }
-.text 
-{
+.text {
     color: white;
     font-size: 1.5rem;
     position: absolute;
@@ -389,9 +369,8 @@ header h1 {
 .listadona {
     background-color: rgba(255, 255, 255, 0.2);
     list-style-type: none;
-    
     border-radius: 5px;
-    margin: 0;
+    margin: 0 0 16px;
     padding: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -559,6 +538,7 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     align-self: center;
+    margin: 16px 0;
 }
 input[type=submit]:hover {
     transition: 0.3s;
@@ -573,6 +553,9 @@ input[type=submit]:active {
 }
 .contactlist {
     overflow: show;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
 }
 .contactlist li {
     list-style-type: none;
@@ -649,10 +632,7 @@ input[type=submit]:active {
 }
 
 /* MEDIA QUERYS */
-/* CELULARES y TABLETS CHICAS */
-@media screen and (max-width:1080px){
 
-}
 /* TABLETS Y PANTALLAS PC CHICAS */
 @media screen and (max-width: 1366px) {
     h1 {    
@@ -688,27 +668,73 @@ input[type=submit]:active {
     .subtitle {
         grid-column: 1 / 3;
     }
-    .col4 form {
-        display: grid;    
-        grid-template-columns: 46% 46%;
-        column-gap: 2.5%;
-        text-align: left;
-        width: 100%;
+    .col4 form {  
+        grid-template-columns: 48% 48%;
+        column-gap: 2%;
     }
     hr.solid {
-        height: 8px;
-        background-image: radial-gradient(#2f333d, transparent 65%);
-        border: 0;
-        height: 1px;
-        grid-column: 1 / 3;
-        margin-top: 10px;
-        margin-bottom: 10px;   
+        grid-column: 1 / 3;  
     }
     .listadona {
         border: transparent;
     }
     .precio {
         margin-bottom: 5%;
+    } 
+    .contactlist {
+        grid-template-columns: 100%;
+    }  
+    .adop {
+        grid-column: 1 / 3;
     }
-    
+}
+
+/* CELULARES y TABLETS CHICAS */
+@media screen and (max-width:1080px){
+    h2 {
+        grid-column: 1 / 2;
+    }
+    .show {
+        grid-template-columns: repeat(1, 98%);
+    }
+    .col2 {
+        grid-column: 1 / 2;
+    }
+    .col3 {
+        grid-column: 1 / 2;
+    }
+    .col3-4 {
+        grid-column: 1 / 2;
+    }
+    .col4 {
+        grid-column: 1 / 2;
+    }
+    .col5 {
+        grid-column: 1 / 2;
+    }
+    .col6 {
+        grid-column: 2 / 5;
+    }
+    .containerFundacion {
+        grid-template-columns: repeat(4, 25%);
+    }
+    .subtitle {
+        grid-column: 1 / 2;
+    }
+    .col4 form {
+        grid-template-columns: 100%;
+    }
+    form {
+        grid-template-columns: 98%;
+        grid-row: 2 / 4;    
+    }
+    hr.solid {
+        grid-column: 1 / 2;  
+    }
+    .descripcion img {
+        margin-bottom: 16px;
+    }
+    .adop {
+        grid-column: 1 / 2;
+    }
 }
