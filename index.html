@@ -222,14 +222,14 @@
                 <br>
             <div class="col1" >
                 <div class="subtitle col4">¡Completa el formulario de adopción!</div>
-                <form action="/action_page.php" target="_blank" method="post" autocomplete="on">
+                <form action="/action_page.php" id="adoptionsForm" target="_blank" method="post" autocomplete="on">
                     <div>
                         <label for="fname"><h4>Nombre</h4></label>
                         <input type="text" id="fname" name="firstname" placeholder="Tu nombre..." required><br>
                     </div>
                     <div>
                         <label for="email"><h4>Dirección de E-mail</h4></label>
-                        <input type="email" id="email" name="e-mail" placeholder="Tu e-Mail..." required><br>              
+                        <input type="email" id="emailFormAdoptions" name="e-mail" placeholder="Tu e-Mail..." required><br>              
                     </div>
                     <div>
                         <label for="lname"><h4>Apellido</h4></label>
@@ -671,7 +671,7 @@
                 </div>
                 <div class="col4">
                     <h5 style="font-size: 1rem;">Datos personales (Todos los campos son requeridos)</h5>
-                    <form action="/action_page.php" target="_blank" method="post" autocomplete="on">  <!-- CAMBIAR ACTION / INSERTAR DESTINO -->  
+                    <form action="/action_page.php" target="_blank" method="post" autocomplete="on" id="participateForm">  <!-- CAMBIAR ACTION / INSERTAR DESTINO -->  
                         <div>
                             <label for="fname"><h4>Nombre</h4></label>
                             <input type="text" id="fname" name="firstname" placeholder="Tu nombre..." required><br>
@@ -682,7 +682,7 @@
                         </div>
                         <div>
                             <label for="email"><h4>Dirección de E-mail</h4></label>
-                            <input type="email" id="email" name="e-mail" placeholder="Tu e-Mail..." required><br>              
+                            <input type="email" id="emailFormParticipate" name="e-mail" placeholder="Tu e-Mail..." required><br>              
                         </div>                        
                         <div>
                             <label for="tel"><h4>Teléfono celular/fijo</h4></label>
