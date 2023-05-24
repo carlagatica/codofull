@@ -106,10 +106,10 @@
     background: linear-gradient(transparent, #3f3f3f);
 }
 
-/*.containMore .card.active .content::before
+.containMore .card.active .content::before
 {
     display: none;
-}*/
+}
 
 .slider
 {
