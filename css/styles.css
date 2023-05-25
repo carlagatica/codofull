@@ -135,6 +135,9 @@ header h1 {
     height: 8vh;
     z-index: 2;    
 }
+.navbar .hamb {
+    display: none;
+}
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -811,7 +814,42 @@ input[type=submit]:active {
 }
 
 /* CELULARES y TABLETS CHICAS */
-@media screen and (max-width:1080px){      
+@media screen and (max-width:1080px){    
+    .navbar ul li{
+        float: none;
+    }  
+    .mynavbar .hamb {
+        display: block;
+        background-color: #c5e3b9;
+        color: #2F333D;
+        height: 8vh;
+        align-self: center;
+    }
+    .mynavbar .hamb:hover {
+        background-color: #2F333D;
+        color: #c5e3b9;
+    }
+    .mynavbar.responsive {
+        position: relative;
+        background-color: #c5e3b9;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+    .mynavbar.responsive li a{
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: #c5e3b9;
+    }
+    .mynavbar.responsive li a:hover:not(.active) {
+        background-color:#aac49c;
+    }  
+    .active {
+        background-color: #818ca7;
+        font-weight: bold;    
+    }
     h2 {
         grid-column: 1 / 2;
     }
