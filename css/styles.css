@@ -584,8 +584,20 @@ hr.solid {
     text-align: center;
     padding: 3%;
 }
+
 /* COMPRAS */
 
+.modalback {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 /*CONTACT FORM*/ 
 .contactrow {
@@ -713,7 +725,7 @@ input[type=submit]:active {
     background-color: rgba(0,0,0,0.4); 
 }
 .modal-content {
-    background-color: #cc8f80;
+    background-color: rgba(204, 143, 128, 1);
     margin: 15% auto; 
     padding: 20px;
     border: 5px dashed #2F333D;
