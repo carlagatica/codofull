@@ -838,9 +838,14 @@
             <!-- SECTION: PARTICIPA -->
             <div class="show" id="ayudanos">  
                 <h2>AYUDANOS</h2>
-                <p class="descripcion col4"> Todas las compras realizadas por este medio nos ayudan a mantener el refugio. Agradecemos mucho tu parcipación.</p>
                 <!-- SECTION: PRODUCTOS CARRITO -->
                 <div id="app">
+                    <!--Boton para mostrar el carrito de compras si no está visible-->
+                    <div v-if="!mostrarCarrito">
+                        <button @click="obtenerCarrito"> Ver carrito de compras </button>
+                    </div>
+                    <p class="descripcion col4"> Todas las compras realizadas por este medio nos ayudan a mantener el refugio. Agradecemos mucho tu parcipación.</p>
+                    <!-- productos -->
                     <ul class="listadona" v-for="producto in productos" :key="producto.codigo">
                         <li class="titulo"><i class="fa-solid fa-paw"></i> {{ producto.descripcion }}</li>
                         <li class="descripcion">Cantidad disponible: {{ producto.cantidad }}</li>
@@ -848,12 +853,7 @@
                         <li class="descripcion">Quitar del carrito de compras<button @click="restarDelCarrito(producto)">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button></li>
                         <li class="precio"><a href="#" class="button">$ {{ producto.precio }}</a></li>
                     </ul> 
-                    <!--Boton para mostrar el carrito de compras si no está visible-->
-                    <div v-if="!mostrarCarrito">
-                        <button @click="obtenerCarrito"> Ver carrito de compras </button>
-                    </div>
                     <!--Modal del carrito de compras-->
-                    <!-- app -->
                     <div v-if="mostrarCarrito" class="modalback"> 
                         <div class="modal-content">
                             <span class="close" @click="mostrarCarrito = false">&times;</span>
