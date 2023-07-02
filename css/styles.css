@@ -586,6 +586,11 @@ hr.solid {
 }
 
 /* COMPRAS */
+.nuevagrilla {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 2%; 
+}
 
 .modalback {
     position: fixed;

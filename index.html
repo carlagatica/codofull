@@ -839,43 +839,47 @@
             <div class="show" id="ayudanos">  
                 <h2>AYUDANOS</h2>
                 <!-- SECTION: PRODUCTOS CARRITO -->
-                <div id="app">
-                    <!--Boton para mostrar el carrito de compras si no está visible-->
-                    <div v-if="!mostrarCarrito">
-                        <button @click="obtenerCarrito"> Ver carrito de compras </button>
-                    </div>
-                    <p class="descripcion col4"> Todas las compras realizadas por este medio nos ayudan a mantener el refugio. Agradecemos mucho tu parcipación.</p>
-                    <!-- productos -->
-                    <ul class="listadona" v-for="producto in productos" :key="producto.codigo">
-                        <li class="titulo"><i class="fa-solid fa-paw"></i> {{ producto.descripcion }}</li>
-                        <li class="descripcion">Cantidad disponible: {{ producto.cantidad }}</li>
-                        <li class="descripcion">Agregar al carrito de compras<button @click="agregarAlCarrito(producto)">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</button></li>
-                        <li class="descripcion">Quitar del carrito de compras<button @click="restarDelCarrito(producto)">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button></li>
-                        <li class="precio"><a href="#" class="button">$ {{ producto.precio }}</a></li>
-                    </ul> 
-                    <!--Modal del carrito de compras-->
-                    <div v-if="mostrarCarrito" class="modalback"> 
-                        <div class="modal-content">
-                            <span class="close" @click="mostrarCarrito = false">&times;</span>
-                            <h3>Productos en el carrito:</h3>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Descripción</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr v-for="item in carrito" :key="item.codigo">
-                                    <td>{{ item.codigo }}</td>
-                                    <td>{{ item.descripcion }}</td>
-                                    <td align="right">{{ item.cantidad }}</td>
-                                    <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                <div id="app" class="col4">
+                    <div class="nuevagrilla">
+                        <h5 class="col4" style="font-size: 1rem;"> Todas las compras realizadas por este medio nos ayudan a mantener el refugio. Agradecemos mucho tu parcipación.</h5>
+                        <!--Boton para mostrar el carrito de compras si no está visible-->
+                        <div v-if="!mostrarCarrito" class="col4" style="text-align: center;">
+                            <button @click="obtenerCarrito" id="myBtn"> Ver carrito de compras </button>
+                        </div>
+                        <!-- productos -->
+                        <div v-for="producto in productos" :key="producto.codigo">
+                            <ul class="listadona">
+                                <li class="titulo"><i class="fa-solid fa-paw"></i> {{ producto.descripcion }}</li>
+                                <li class="descripcion">Cantidad disponible: {{ producto.cantidad }}</li>
+                                <li class="descripcion">Agregar al carrito de compras<button @click="agregarAlCarrito(producto)" class="inFileBtn">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</button></li>
+                                <li class="descripcion">Quitar del carrito de compras<button @click="restarDelCarrito(producto)" class="inFileBtn">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button></li>
+                                <li class="precio"><a href="#" class="button">Precio Unitario $ {{ producto.precio }} </a></li>
+                            </ul> 
+                        </div>
+                        <!--Modal del carrito de compras-->
+                        <div v-if="mostrarCarrito" class="modalback"> 
+                            <div class="modal-content">
+                                <span class="close" @click="mostrarCarrito = false">&times;</span>
+                                <h3>Productos en el carrito:</h3>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Descripción</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr v-for="item in carrito" :key="item.codigo">
+                                        <td>{{ item.codigo }}</td>
+                                        <td>{{ item.descripcion }}</td>
+                                        <td align="right">{{ item.cantidad }}</td>
+                                        <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>                   
                     </div>
                     <!--cierre modal-->
