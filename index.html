@@ -32,6 +32,7 @@
                 <li><a class="btn" href="#participa" onmouseup="openCard(event, 'participa')">Participá</a></li>
                 <li><a class="btn" href="#ayudanos"onmouseup="openCard(event, 'ayudanos')">Ayudanos</a></li>
                 <li><a class="btn" href="#contacto" onmouseup="openCard(event, 'contacto')">Contacto</a></li>
+                <li style="position: absolute; right: 0px;"><a class="btn" href="login.html" target="_blank"><i class="fa-solid fa-lock"></i> Admin Login</a></li>
             </ul>
         </nav>
         <!-- CONTENT -->
@@ -844,8 +845,7 @@
                         <h5 class="col4" style="font-size: 1rem;"> Todas las compras realizadas por este medio nos ayudan a mantener el refugio. Agradecemos mucho tu parcipación.</h5>
                         <!--Boton para mostrar el carrito de compras si no está visible-->
                         <div v-if="!mostrarCarrito" class="col4" style="text-align: center;">
-                            <button @click="obtenerCarrito" id="myBtn"> Ver carrito de compras </button>
-                            <button onclick="location.href='login.html'" id="myBtn">Administrador</button>
+                            <button @click="obtenerCarrito" id="myBtn"><i class="fa-solid fa-cart-shopping"></i> Ver carrito de compras </button>
                         </div>
                         <!-- productos -->
                         <div v-for="producto in productos" :key="producto.codigo">
