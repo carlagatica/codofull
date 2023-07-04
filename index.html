@@ -845,7 +845,7 @@
                         <!--Boton para mostrar el carrito de compras si no está visible-->
                         <div v-if="!mostrarCarrito" class="col4" style="text-align: center;">
                             <button @click="obtenerCarrito" id="myBtn"> Ver carrito de compras </button>
-                            <button onclick="location.href='login.html'" id="myBtn2">Administrador</button>
+                            <button onclick="location.href='login.html'" id="myBtn">Administrador</button>
                         </div>
                         <!-- productos -->
                         <div v-for="producto in productos" :key="producto.codigo">
