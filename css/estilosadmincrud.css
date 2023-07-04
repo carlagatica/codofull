@@ -10,12 +10,10 @@ body {
     background-color: #818ca7;
     overflow-x: hidden;        
     text-shadow: 1px 1px 2px #2F333D; 
-    
 }
 
 
 .contenedor-centrado {
-    display:flex;
     padding: 5px;
     width: 100%;
     justify-content: center;
@@ -23,7 +21,6 @@ body {
     text-align: center;
     border-radius: 20px;
     text-shadow: 1px 1px 2px #2F333D; 
-    
 }
 
 
@@ -58,7 +55,6 @@ h3 {
 p {
     font-size: 1rem;
     margin-top: 1%;
-    
 }
 
 
@@ -71,12 +67,10 @@ form {
     border: 1px solid lightslategray;
     border-radius: 5px;
     color: black;
-    
 }
 
 
 table {
-    max-width: 100%;
     margin: 0 auto;
     font-size: 1.5rem;
     padding: 20px;
@@ -94,9 +88,6 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #cccccc;
     border-radius: 100px;
-    
-    
-    
 }
 
 input[type="submit"] {
@@ -124,11 +115,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: purple;
-    
-}
-
 a:link {
     text-decoration:none;
     font-size: 1.5rem;
@@ -138,18 +124,6 @@ a:visited {
     font-size: 1.5rem;
 }
 
-
-a:hover {
-    padding: 8px;
-    margin: 4px;
-    background-color: palevioletred;
-    text-decoration:none;
-    font-size: 1.5rem;
-    color: #aac49c; 
-    border-radius: 50px;
-    cursor: pointer;
-    
-}
 a:active {
     text-decoration:none;
     font-size: 1.5rem;
