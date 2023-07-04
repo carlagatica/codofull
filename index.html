@@ -859,10 +859,10 @@
                         </div>
                         <!--Modal del carrito de compras-->
                         <div v-if="mostrarCarrito" class="modalback"> 
-                            <div class="modal-content">
+                            <div class="modal-content2">
                                 <span class="close" @click="mostrarCarrito = false">&times;</span>
-                                <h3>Productos en el carrito:</h3>
-                                <table>
+                                <h3 class="subtitle">Productos en el carrito:</h3>
+                                <table class="tablacarrito">
                                     <thead>
                                     <tr>
                                         <th>Código</th>
@@ -876,10 +876,11 @@
                                         <td>{{ item.codigo }}</td>
                                         <td>{{ item.descripcion }}</td>
                                         <td align="right">{{ item.cantidad }}</td>
-                                        <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
+                                        <td align="right">&nbsp; &nbsp;$ {{ item.precio }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
+                                
                             </div>
                         </div>                   
                     </div>

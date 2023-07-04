@@ -604,6 +604,38 @@ hr.solid {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.5);
 }
+.modal-content2 {
+    background-color: #cc8f80;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 3px solid #2F333D;
+    width: 40%;
+    border-radius: 10px;
+}
+.tablacarrito {
+    background-color: rgba(58, 68, 90, 0.2);
+    border-radius: 5px;
+    margin: 0 0 16px;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    background-color: #2F333D;
+    border: 1px solid #2F333D;
+    border-bottom: 1px solid #eee;
+    color: #aac49c;
+    font-size: 1.3rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 15px;
+}
+td {
+    text-align: center;
+    font-size: 1.3rem;
+}
 
 /*CONTACT FORM*/ 
 .contactrow {
